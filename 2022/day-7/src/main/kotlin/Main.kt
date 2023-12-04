@@ -5,7 +5,7 @@ val MutableList<Directory>.pop get() = removeLast()
 val MutableList<Directory>.peek get() = last()
 
 fun main() {
-    val lines = readFileAsLines("input.txt").toMutableList()
+    val lines = AOCInput.readInput().toMutableList()
     lines.removeFirst()
 
     lines.forEach { instruction ->

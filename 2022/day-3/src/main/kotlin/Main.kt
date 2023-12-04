@@ -5,13 +5,13 @@ fun main() {
 }
 
 fun partOne() {
-    val lines = readFileAsLines("input.txt")
+    val lines = AOCInput.readInput()
 
     println(lines.sumOf { Rucksack(Compartments(it)).compartments.commonItems.sumOf { c -> c.priority } })
 }
 
 fun partTwo() {
-    val lines = readFileAsLines("input.txt")
+    val lines = AOCInput.readInput()
 
     val groups = mutableListOf<Group>()
     for(i in lines.indices step 3) {

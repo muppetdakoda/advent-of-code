@@ -3,7 +3,7 @@ fun main() {
 }
 
 fun partOne() {
-    val lines = readFileAsLines("input.txt")
+    val lines = AOCInput.readInput()
 
     var playerScore = 0
     lines.forEach {
@@ -22,7 +22,7 @@ fun partOne() {
 }
 
 fun partTwo() {
-    val lines = readFileAsLines("input.txt")
+    val lines = AOCInput.readInput()
 
     var playerScore = 0
     lines.forEach {

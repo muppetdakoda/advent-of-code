@@ -1,5 +1,5 @@
 fun main() {
-    val lines = readFileAsLines("input.txt")
+    val lines = AOCInput.readInput()
 
     val packet = indexOfXCharsInARow(lines[0], 4)
     val message = indexOfXCharsInARow(lines[0], 14)

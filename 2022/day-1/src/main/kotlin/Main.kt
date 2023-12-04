@@ -1,5 +1,5 @@
 fun main() {
-    val lines = readFileAsLines("input.txt")
+    val lines = AOCInput.readInput()
 
     val elves = mutableListOf(Elf())
     lines.forEach {

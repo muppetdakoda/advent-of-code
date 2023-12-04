@@ -1,23 +1,22 @@
-import org.jetbrains.kotlin.gradle.tasks.KotlinCompile
-
 plugins {
-    kotlin("jvm") version "1.7.20"
+    kotlin("jvm") version "1.9.21"
 }
 
-allprojects {
-    group = "dev.dakoda"
-    version = "1.0-SNAPSHOT"
+group = "dev.dakoda"
+version = "1.0-SNAPSHOT"
 
-    repositories {
-        mavenCentral()
-    }
+repositories {
+    mavenCentral()
+}
 
-    tasks.withType<JavaCompile> {
-        sourceCompatibility = "17"
-        targetCompatibility = "17"
-    }
+dependencies {
+    testImplementation(kotlin("test"))
+}
 
-    tasks.withType<KotlinCompile> {
-        kotlinOptions.jvmTarget = "17"
-    }
+tasks.test {
+    useJUnitPlatform()
+}
+
+kotlin {
+    jvmToolchain(8)
 }

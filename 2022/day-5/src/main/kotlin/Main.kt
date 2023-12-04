@@ -1,5 +1,5 @@
 fun main() {
-    val instructions = readFileAsLines("input.txt")
+    val instructions = AOCInput.readInput()
 
     val constructInstruction = instructions.subList(0, instructions.indexOf(""))
     val sortInstructions = instructions.subList(instructions.indexOf("") + 1, instructions.size)

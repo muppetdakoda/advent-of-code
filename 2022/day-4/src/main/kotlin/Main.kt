@@ -1,5 +1,5 @@
 fun main() {
-    val lines = readFileAsLines("input.txt")
+    val lines = AOCInput.readInput()
 
     val pairs = lines.map { it.split(",") }.map { it[0] to it[1] }.map {
         Assignment(it.first) to Assignment(it.second)
