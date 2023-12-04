@@ -11,5 +11,4 @@ plugins {
 
 rootProject.name = "advent-of-code-2023"
 
-val lastDay = 4
-include("common", *(1..lastDay).map { "day-$it" }.toTypedArray())
+include("common", *(1..25).map { "day-$it" }.toTypedArray())
