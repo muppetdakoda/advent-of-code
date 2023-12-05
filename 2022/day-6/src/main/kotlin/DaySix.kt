@@ -1,9 +1,12 @@
 fun main() {
     val lines = AOCInput.readInput()
 
-    val packet = indexOfXCharsInARow(lines[0], 4)
-    val message = indexOfXCharsInARow(lines[0], 14)
-    println()
+    indexOfXCharsInARow(lines[0], 4).also {
+        println("Part 1 solution: $it")
+    }
+    indexOfXCharsInARow(lines[0], 14).also {
+        println("Part 2 solution: $it")
+    }
 }
 
 fun indexOfXCharsInARow(line: String, inARow: Int): Pair<Int, String> {
@@ -20,4 +23,17 @@ fun indexOfXCharsInARow(line: String, inARow: Int): Pair<Int, String> {
         return@breaking -1
     } + 1
     return markerIndex to line.substring(markerIndex - inARow, markerIndex)
+}
+
+class LimitedBuffer<T>(
+    private val length: Int,
+) {
+
+    val items: List<T> get() = _items
+    private val _items: MutableList<T> = mutableListOf()
+
+    fun push(item: T) {
+        if (_items.size == length) _items.removeFirst()
+        _items.add(item)
+    }
 }
